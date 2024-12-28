@@ -181,52 +181,83 @@
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
 
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <form id="contactForm" action="proces_formulario.php" method="POST">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <input 
+                                    class="form-control" 
+                                    id="name" 
+                                    name="name" 
+                                    type="text" 
+                                    placeholder="Enter your name..." 
+                                    required />
                                 <label for="name">Nombre y apellido:</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">Es importante llenar este campo.</div>
+                                <div class="invalid-feedback">Es importante llenar este campo.</div>
                             </div>
+                        
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <input 
+                                    class="form-control" 
+                                    id="email" 
+                                    name="email" 
+                                    type="email" 
+                                    placeholder="name@example.com" 
+                                    required />
                                 <label for="email">Email:</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">Es importante llenar este campo.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">El Emais ingresado no es valido.</div>
+                                <div class="invalid-feedback">Es importante llenar este campo.</div>
+                                <div class="invalid-feedback">El Email ingresado no es válido.</div>
                             </div>
+                        
                             <!-- Phone number input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <input 
+                                    class="form-control" 
+                                    id="phone" 
+                                    name="phone" 
+                                    type="tel" 
+                                    placeholder="(123) 456-7890" 
+                                    required />
                                 <label for="phone">Celular de contacto: </label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">Es importante llenar este campo.</div>
+                                <div class="invalid-feedback">Es importante llenar este campo.</div>
                             </div>
+                        
                             <!-- Message input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <textarea 
+                                    class="form-control" 
+                                    id="message" 
+                                    name="message" 
+                                    placeholder="Enter your message here..." 
+                                    style="height: 10rem" 
+                                    required></textarea>
                                 <label for="message">Ingresa un detalle de tu proyecto.</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">Es importante llenar este campo</div>
+                                <div class="invalid-feedback">Es importante llenar este campo</div>
                             </div>
+                        
                             <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
+
+
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3">
-                                    <div class="fw-bolder">¡Formulario enviado correctamente!(*Este formulario es solo una demostraciòn, para brindarte una asesoria personalizada por favor escribe por wa en el boton que se muestra abajo*)</div>
-                                    <!--To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>-->
+                                    <div class="fw-bolder">
+                                        ¡Formulario enviado correctamente! 
+                                    </div>
                                 </div>
                             </div>
+                        
                             <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">¡Error al enviar el mensaje!</div></div>
+                            <div class="d-none" id="submitErrorMessage">
+                                <div class="text-center text-danger mb-3">¡Error al enviar el mensaje!</div>
+                            </div>
+                        
                             <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-info btn-xl disabled" id="submitButton" type="submit">Enviar</button></div>
+                            <div class="d-grid">
+                                <button class="btn btn-info btn-xl" id="submitButton" type="submit">Enviar</button>
+                            </div>
                         </form>
+                        
+                        
                     </div>
                 </div>
             </div>
